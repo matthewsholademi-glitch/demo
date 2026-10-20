@@ -15,6 +15,7 @@ import {
   SCHEME_ID,
 } from '@wraith-protocol/sdk/chains/stellar';
 import { STELLAR_NETWORK } from '@/config';
+import { getStellarContractId } from '@/lib/stellar/deployments';
 import { fetchWithRetry, withRetry, type RetryOptions } from '@/lib/stellar/retry';
 
 const ANNOUNCER_CONTRACT = 'CCJLK2QRBJAAKIG6ELPQVXLLWMKKWV4Q2FKWUETHZGMPAMHK7WVWL';
@@ -114,7 +115,7 @@ export async function simulateStellarSendAnnouncement(
     networkPassphrase,
   })
     .addOperation(
-      new Contract(ANNOUNCER_CONTRACT).call(
+      new Contract(getStellarContractId('announcer')).call(
         'announce',
         nativeToScVal(SCHEME_ID, { type: 'u32' }),
         new Address(result.stealthAddress).toScVal(),
