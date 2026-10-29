@@ -1,7 +1,5 @@
 node_modules/
 dist/
-.env
-.env.*
 reference/
 *.local
 
@@ -14,3 +12,4 @@ package-lock.json
 playwright-report/
 test-results/
 public/mockServiceWorker.js
+config.bat

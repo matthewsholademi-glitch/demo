@@ -1,0 +1,18 @@
+{
+  "default_branch": "develop",
+  "branches": [
+    "develop",
+    "fix/issue-216-wave-10-remove-ts-nocheck-from-stellarsend",
+    "origin"
+  ],
+  "parent": {
+    "develop": null,
+    "fix/issue-216-wave-10-remove-ts-nocheck-from-stellarsend": "develop",
+    "origin": "develop"
+  },
+  "order": [
+    "develop",
+    "fix/issue-216-wave-10-remove-ts-nocheck-from-stellarsend",
+    "origin"
+  ]
+}
